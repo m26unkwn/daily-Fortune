@@ -9,11 +9,16 @@ let fortunes = ['A beautiful, smart, and loving person will be coming into your 
 ]
 
 function fortuneSelector(){
-   let randomFortune=Math.floor(Math.random()* fortunes)
-   return fortunes(randomFortune)
+   let randomFortune=Math.floor(Math.random()* fortunes.length)
+   return fortunes[randomFortune]
 }
 
 function showFortune(){
-    fortune.innerHTML=fortuneSelector()
-    
+    fortune.innerHTML=fortuneSelector();
+    button.innerHTML = 'Come back tomorrow!';
+    button.removeEventListener('click',showFortune)
+
+
 }
+
+button.addEventListener('click',showFortune);

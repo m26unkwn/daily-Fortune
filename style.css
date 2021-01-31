@@ -1,4 +1,4 @@
-*{
+*{ 
     margin: auto;
     padding: 0;
     background-color: #141c3a;
@@ -6,11 +6,24 @@
 
 }
 
+.contianer{
+    position: absolute;
+    top: 40%;
+    left: 20%;
+    right: 20%;
+}
+
+
+
 h1{
     color: white;
     text-align: center;
 }
-.fortune{
+#fortune{
+    display: flex;
+    justify-content: center;
+    font-weight: 900;
+    margin: 40px 0;
     color: goldenrod;
 
 }
@@ -23,4 +36,16 @@ h1{
     border-radius: 5px;
     color: #141c3a;
     cursor: pointer;
+}
+
+@media only screen and (max-device-width: 360px) {
+    .body{
+        width: 300px;
+    }
+    .contianer{
+        position: absolute;
+        top: 30%;
+        left: 20%;
+        right: 20%;
+    }
 }
